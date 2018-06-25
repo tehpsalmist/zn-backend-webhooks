@@ -33,8 +33,8 @@ module.exports.validateSecret = function (settings, request) {
 	var webhookKey = request.headers['x-zengine-webhook-key'];
 	var webhookId = 'scheduled' in request.body ? request.body.scheduled.id : request.body.webhook.id;
 
-	if ((idField in settings) && (keyField in settings)) {
-		return (settings[idField] === webhookId) && (settings[keyField] === webhookKey);
+	if (idField in settings && keyField in settings) {
+		return settings[idField] === webhookId && settings[keyField] === webhookKey;
 	}
 
 	return false;
