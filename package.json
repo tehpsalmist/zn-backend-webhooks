@@ -1,0 +1,30 @@
+{
+  "name": "@zenginehq/backend-webhooks",
+  "version": "1.1.1",
+  "description": "Helper library for working with Webhooks in Zengine backend plugins.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "jshint --config .jshintrc index.js || true",
+    "release": "jshint --config .jshintrc index.js && standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZengineHQ/zn-backend-webhooks.git"
+  },
+  "keywords": [
+    "zn-plugin",
+    "zn-backend"
+  ],
+  "author": "Alex Weber <alex.weber@wizehive.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZengineHQ/zn-backend-webhooks/issues"
+  },
+  "homepage": "https://github.com/ZengineHQ/zn-backend-webhooks#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "standard-version": "^4.4.0"
+  }
+}
