@@ -41,28 +41,39 @@ module.exports.validateSecret = function (settings, request) {
 };
 
 /**
- * Returns whether a record went into a folder, optionally specifying from where it came from.
+ * Returns whether a record went into the specified folder.
  *
  * @param {Object} activity
- * @param {number} toFolderId Destination folder id.
- * @param {number} [fromFolderId] Optional. Source folder id.
+ * @param {number} folder Destination folder id.
  *
  * @return {boolean}
  */
-module.exports.activityFolders = function (activity, toFolderId, fromFolderId) {
+module.exports.activityToFolder = function (activity, folder) {
 	var activityChanges = activity.changes || {};
 
 	if (activityChanges.to && activityChanges.to.folder && activityChanges.to.folder.id &&
-		activityChanges.to.folder.id === toFolderId) {
+		activityChanges.to.folder.id === folder) {
 
-		if (!fromFolderId) {
-			return true;
-		}
+		return true;
+	}
 
-		if (activityChanges.from && activityChanges.from.folder && activityChanges.from.folder.id &&
-			activityChanges.from.folder.id === fromFolderId) {
-			return true;
-		}
+	return false;
+};
+
+/**
+ * Returns whether a record came from the specified folder when moving to another one.
+ *
+ * @param {Object} activity
+ * @param {number} folder Destination folder id.
+ *
+ * @return {boolean}
+ */
+module.exports.activityFromFolder = function (activity, folder) {
+	var activityChanges = activity.changes || {};
+
+	if (activityChanges.from && activityChanges.from.folder && activityChanges.from.folder.id &&
+		activityChanges.from.folder.id === folder) {
+		return true;
 	}
 
 	return false;
