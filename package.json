@@ -16,7 +16,7 @@
     "zn-plugin",
     "zn-backend"
   ],
-  "author": "Alex Weber <alex.weber@wizehive.com",
+  "author": "Alex Weber <alex.weber@wizehive.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ZengineHQ/zn-backend-webhooks/issues"
