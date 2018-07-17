@@ -4,9 +4,11 @@
   "description": "Helper library for working with Webhooks in Zengine backend plugins.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc mocha --reporter spec --no-colors --require test/_bootstrap.js",
     "lint": "jshint --config .jshintrc index.js || true",
-    "release": "jshint --config .jshintrc index.js && standard-version"
+    "docs": "jsdoc index.js README.md --destination docs",
+    "cover": "nyc --reporter=lcov npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "release": "jshint --config .jshintrc index.js && npm test && standard-version"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,16 @@
   "homepage": "https://github.com/ZengineHQ/zn-backend-webhooks#readme",
   "dependencies": {},
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.2",
+    "jsdoc": "^3.5.5",
     "jshint": "^2.9.5",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
     "standard-version": "^4.4.0"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
