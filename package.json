@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --reporter spec --no-colors --require test/_bootstrap.js",
-    "lint": "jshint --config .jshintrc index.js || true",
+    "lint": "jshint --config .jshintrc index.js",
     "docs": "jsdoc index.js README.md --destination docs",
     "cover": "nyc --reporter=lcov npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "release": "jshint --config .jshintrc index.js && npm test && standard-version"
+    "release": "npm run lint && npm test && standard-version"
   },
   "repository": {
     "type": "git",
