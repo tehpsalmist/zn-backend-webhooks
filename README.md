@@ -2,7 +2,7 @@
 
 > Helper module for working with Webhooks in Zengine backend Plugins.
 
-[![Coverage Status](https://coveralls.io/repos/github/ZengineHQ/zn-backend-webhooks/badge.svg?branch=master)](https://coveralls.io/github/ZengineHQ/zn-backend-webhooks?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ZengineHQ/zn-backend-webhooks/badge.svg?branch=master)](https://coveralls.io/github/ZengineHQ/zn-backend-webhooks?branch=master)   [![Build Status](https://circleci.com/gh/ZengineHQ/zn-backend-webhooks/tree/master.svg?style=shield)](https://circleci.com/gh/ZengineHQ/zn-backend-webhooks/tree/master)
 
 ## Installation
 
