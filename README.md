@@ -52,7 +52,7 @@ You can customize this by calling `$webhook.setIdField('myIdField)` and `$webhoo
 
 #### activityToFolder(activity, toFolder)
 
-Returns whether the given activity is a move to the specified folder (ie: record moved from a folder this this one) 
+Returns whether the given activity is a move to the specified folder (ie: record moved from a folder into this one) 
 
 #### activityFromFolder(activity, toFolder)
 
