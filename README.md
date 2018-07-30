@@ -2,7 +2,7 @@
 
 > Helper module for working with Webhooks in Zengine backend Plugins.
 
-[![Coverage Status](https://coveralls.io/repos/github/ZengineHQ/zn-backend-webhooks/badge.svg?branch=master)](https://coveralls.io/github/ZengineHQ/zn-backend-webhooks?branch=master)   [![Build Status](https://circleci.com/gh/ZengineHQ/zn-backend-webhooks/tree/master.svg?style=shield)](https://circleci.com/gh/ZengineHQ/zn-backend-webhooks/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/ZengineHQ/zn-backend-webhooks/badge.svg?branch=master)](https://coveralls.io/github/ZengineHQ/zn-backend-webhooks?branch=master)   [![Build Status](https://circleci.com/gh/ZengineHQ/zn-backend-webhooks/tree/master.svg?style=shield)](https://circleci.com/gh/ZengineHQ/zn-backend-webhooks/tree/master) [![npm version](https://badge.fury.io/js/%40zenginehq%2Fbackend-webhooks.svg)](https://badge.fury.io/js/%40zenginehq%2Fbackend-webhooks)
 
 ## Installation
 
@@ -35,6 +35,7 @@ $firebase.load(workspaceId).then(function (settings) {
     // You can also make sure the activity didn't come from a specific folder.
     if (!$webhook.activityFromFolder(fullActivity, settings.submittedFolder)) {
     	// Do something else.
+    	// $api.moveToFolder(approcvedfolder);
     }
   });
 });
