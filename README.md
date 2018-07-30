@@ -17,7 +17,7 @@ var $webhook = require('@zenginehq/backend-webhooks');
 var $firebase = require('@zenginehq/backend-firebase');
 var $api = require('@zenginehq/backend-http');
 
-var workspace; // from eventData
+var workspaceId; // from eventData
 var activity; // from eventData
 
 // Load settings from firebase.
