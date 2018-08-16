@@ -41,6 +41,22 @@ module.exports.validateSecret = function (settings, request) {
 };
 
 /**
+ * Iterates over settings object keys and returns the key of the valid config
+ *
+ * @param {Object} settings settings from firebase
+ * @param {Object} request The HTTP Request
+ *
+ * @returns {string|undefined}
+ */
+module.exports.getValidatedMultiConfigId = function (settings, request) {
+	var webhookKey = request.headers['x-zengine-webhook-key'];
+	var webhookId = 'scheduled' in request.body ? request.body.scheduled.id : request.body.webhook.id;
+
+	return settings && Object.keys(settings)
+		.find(key => settings[key][keyField] === webhookKey && settings[key][idField] === webhookId);
+}
+
+/**
  * Returns whether a record went into the specified folder.
  *
  * @param {Object} activity
