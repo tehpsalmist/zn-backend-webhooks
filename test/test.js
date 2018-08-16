@@ -58,9 +58,7 @@ describe('module', function () {
 		expect($webhook.getValidatedMultiConfigId(multiConfigSettings, request)).to.equal('crazyKeyString');
 
 		const reqWithBadHeader = {
-			headers: {
-				'x-zengine-webhook-key': undefined
-			},
+			headers: {},
 			body: {
 				webhook: {
 					id: 123
