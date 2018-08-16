@@ -66,7 +66,7 @@ describe('module', function () {
 			}
 		};
 
-		expect($webhook.getValidatedMultiConfigId(multiConfigSettings, reqWithBadHeader)).to.equal(undefined);
+		expect($webhook.getValidatedMultiConfigId(multiConfigSettings, reqWithBadHeader)).to.be.undefined;
 
 		const reqWithBadId = {
 			headers: {
