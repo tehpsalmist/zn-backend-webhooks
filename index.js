@@ -54,7 +54,7 @@ module.exports.getValidatedMultiConfigId = function (settings, request) {
 
 	return settings && Object.keys(settings)
 		.find(key => settings[key][keyField] === webhookKey && settings[key][idField] === webhookId);
-}
+};
 
 /**
  * Returns whether a record went into the specified folder.
