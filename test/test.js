@@ -24,10 +24,6 @@ describe('module', function () {
 		crazyKeyString: {
 			webhookId: 123,
 			webhookKey: 456,
-		},
-		otherCrazyKeyString: {
-			webhookId: 789,
-			webhookKey: 101,
 		}
 	}
 
